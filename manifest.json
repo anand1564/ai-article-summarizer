@@ -1,0 +1,32 @@
+{
+    "manifest_version": 3,
+    "name": "ai-article-summarizer",
+    "version": "1.0",
+    "description": "A chrome extension that uses AI to summarize articles",
+    "permissions": [
+        "activeTab",
+        "scripting",
+        "tabs"
+    ],
+    "author": "Anand",
+    "action": {
+        "default_popup": "index.html",
+        "default_title": "Summarize articles online"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "host_permissions": [
+        "<all_urls>"
+    ]
+}

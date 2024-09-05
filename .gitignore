@@ -1,0 +1,5 @@
+# .env file for storing environment variables
+.env
+
+# Other files or directories to ignore
+node_modules/
